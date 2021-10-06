@@ -1,4 +1,4 @@
-import { IPhotoEntity, Photo } from './photo.entity'
+import { IPhotoEntity, Photo } from '../../photos/entity/photo.entity'
 import { Contact, IContactEntity } from './contact.entity'
 import { Column, Entity, JoinColumn, OneToOne, PrimaryGeneratedColumn } from 'typeorm'
 
@@ -7,6 +7,7 @@ export interface IUserEntity {
   fullName: string
   status?: string
   lookingForAJob?: boolean
+  lookingForAJobDescription?: string
   contacts: IContactEntity
   photos: IPhotoEntity
 }
@@ -31,6 +32,11 @@ export class User {
     nullable: true
   })
   status: string
+  @Column({
+    type: 'text',
+    nullable: true
+  })
+  lookingForAJobDescription: string
 
   @Column({
     type: 'boolean',

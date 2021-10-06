@@ -1,7 +1,7 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
 
 export interface IPhotoEntity {
-  id: number
+  id?: number
   small: string
   large: string
 }
@@ -15,12 +15,11 @@ export class Photo {
     type: 'text',
     nullable: true
   })
-  small: number
+  small: string
 
   @Column({
     type: 'text',
     nullable: true
   })
-  large: number
-
+  large: string
 }

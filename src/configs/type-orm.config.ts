@@ -1,7 +1,7 @@
 import * as dotenv from 'dotenv'
 import { TypeOrmModuleOptions } from '@nestjs/typeorm'
 import { User } from '../modules/domains/users/entity/user.entity'
-import { Photo } from '../modules/domains/users/entity/photo.entity'
+import { Photo } from '../modules/domains/photos/entity/photo.entity'
 import { Contact } from '../modules/domains/users/entity/contact.entity'
 dotenv.config()
 

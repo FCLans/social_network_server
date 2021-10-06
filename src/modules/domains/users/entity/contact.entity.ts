@@ -1,10 +1,10 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm'
 
 export interface IContactEntity {
-  vk: string
-  facebook: string
-  instagram: string
-  github: string
+  vk?: string
+  facebook?: string
+  instagram?: string
+  github?: string
 }
 
 @Entity('contacts')
